@@ -1,0 +1,8 @@
+name: 'Setup config for kubectl'
+description: : 'Github Action for setting up configuration for kubectl'
+inputs:
+  DEPLOY_TOKEN:
+    description: 'Access token for deploying user in k8s'
+runs:
+  using: docker
+  image: Dockerfile
