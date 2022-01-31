@@ -1,0 +1,10 @@
+name: CI
+
+on: push
+
+jobs:
+  hello:
+    name: Hello
+    runs-on: self-hosted
+    steps:
+      - run: echo Hi
