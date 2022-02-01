@@ -1,0 +1,24 @@
+name: 'Setup config for kubectl'
+description: 'Github Action for setting up configuration for kubectl'
+inputs:
+  CONFIG_YAML:
+    description: 'Kubeconfig yaml with placeholders for DEPLOYER_TOKEN, NAMESPACE and CONTEXT'
+    required: true
+  DEPLOYER_TOKEN:
+    description: 'Access token for deploying user in k8s'
+    required: false
+  NAMESPACE:
+    description: 'Default kubernetes namespace'
+    required: false
+    default: default
+  CONTEXT:
+    description: 'Default kubernetes context'
+    required: false
+    default: stage-ix-cph
+outputs:
+  kubeconfig:
+    description: 'Final kubeconfig yaml'
+  
+runs:
+  using: 'node12'
+  main: 'lib/run.js'
