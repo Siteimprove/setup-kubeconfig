@@ -9,11 +9,11 @@ This is a github action utility for setting up kubeconfig for use in github acti
   with:
     version: '<version>' # default is latest stable
 - uses: siteimprove/setup-kubeconfig@v1
-	with: 
-		CONFIG_YAML: ${{ secrets.YOUR_KUBECONFIG }}
-		DEPLOYER_TOKEN: ${{ secrests.YOUR_DEPLOYER_USER_TOKEN }}
-		NAMESPACE: <default namespace> (optional)
-		CONTEXT: <default context> (optional)
+  with: 
+    CONFIG_YAML: ${{ secrets.YOUR_KUBECONFIG }}
+    DEPLOYER_TOKEN: ${{ secrests.YOUR_DEPLOYER_USER_TOKEN }}
+    NAMESPACE: <default namespace> (optional)
+    CONTEXT: <default context> (optional)
 ```
 
 ## Notes on config_yaml
